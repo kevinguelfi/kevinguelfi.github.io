@@ -1,105 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+/* Agrega esto al final de tu style.css */
 
-:root {
-  --accent: #2f5d8a;
-  --left-bg: #f3f3f3; /* Gris clarito */
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
 }
 
-/* RESET */
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  color: #222;
-  background: #ffffff;
-}
-
-/* PAGE LAYOUT */
-.page {
-  display: grid;
-  grid-template-columns: 35% 65%; /* 35% gris, 65% blanco */
-  min-height: 100vh;
-}
-
-/* LEFT COLUMN */
-.left {
-  background: var(--left-bg);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* 1. Mueve foto y links a la izquierda */
-  padding: 80px 10% 40px 15%; /* Ajusta el aire alrededor de la foto */
-}
-
-.profile-pic {
-  width: 170px;
-  border-radius: 6px;
-  margin-bottom: 30px;
-}
-
-.links {
-  text-align: left; /* Alinea los links a la izquierda */
-}
-
-.links a {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 14px;
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}
-
-/* RIGHT COLUMN */
-.right {
-  padding: 60px 80px 60px 80px; /* 2. Padding superior reducido para subir el nombre */
-}
-
-/* NAME */
-.right h1 {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 42px;
-  margin: 0 0 30px 0;
-}
-
-/* BIO */
-.bio {
-  font-size: 18.5px;
-  line-height: 1.8;
-  max-width: 700px;
-  text-align: justify; /* 3. Justifica el texto */
-  hyphens: auto;       /* Ayuda a que los bordes sean más prolijos */
-  margin-bottom: 60px;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  gap: 30px;
-  font-size: 15px;
-}
-
-.navbar a {
-  text-decoration: none;
+.content-list li {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: justify; /* Mantiene el borde prolijo */
   color: #444;
 }
 
-.navbar a:hover {
-  color: var(--accent);
+.content-list li strong {
+  color: #000;
+  display: block; /* El título arriba para que se vea más académico */
 }
 
-/* RESPONSIVE: Para que en móviles se vea uno debajo del otro */
-@media (max-width: 768px) {
-  .page {
-    grid-template-columns: 100%;
-  }
-  .left {
-    padding: 40px;
-    align-items: center;
-  }
-  .links {
-    text-align: center;
-  }
+/* Estilo para el link de "Back to Home" */
+.left .links a:first-child {
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #222;
 }
-
