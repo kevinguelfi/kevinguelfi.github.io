@@ -1,48 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500&display=swap');
 
 :root {
-  --accent: #2f5d8a; /* subtle academic blue */
+  --accent: #2f5d8a;
+  --left-bg: #f3f3f3;
 }
 
+/* RESET */
 body {
   margin: 0;
-  background: #ffffff;
-  color: #222;
   font-family: 'Inter', sans-serif;
+  color: #222;
+  background: #ffffff;
 }
 
-/* PAGE CONTAINER */
+/* PAGE LAYOUT */
 .page {
-  max-width: 680px;
-  margin: 80px auto 100px auto;
-  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 35% 65%;
+  min-height: 100vh;
+}
+
+/* LEFT COLUMN */
+.left {
+  background: var(--left-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.profile-pic {
+  width: 170px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.links {
   text-align: center;
 }
 
-/* PHOTO */
-.profile-pic {
-  width: 160px;
-  border-radius: 6px;
-  margin-bottom: 28px;
-}
-
-/* NAME */
-h1 {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 40px;
-  font-weight: 700;
-  margin: 0 0 14px 0;
-  color: #111;
-}
-
-/* LINKS */
-.links {
-  font-size: 14px;
-  margin-bottom: 36px;
-  color: #666;
-}
-
 .links a {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
   color: var(--accent);
   text-decoration: none;
 }
@@ -51,29 +52,38 @@ h1 {
   text-decoration: underline;
 }
 
-.links span {
-  margin: 0 6px;
+/* RIGHT COLUMN */
+.right {
+  padding: 80px 80px 60px 80px;
+}
+
+/* NAME */
+.right h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 42px;
+  margin: 0 0 30px 0;
 }
 
 /* BIO */
 .bio {
   font-size: 18.5px;
-  line-height: 1.75;
-  color: #333;
+  line-height: 1.8;
+  max-width: 700px;
+  text-align: justify;
+  text-justify: inter-word;
   margin-bottom: 60px;
 }
 
 /* NAVBAR */
 .navbar {
   display: flex;
-  justify-content: center;
-  gap: 28px;
+  gap: 30px;
   font-size: 15px;
 }
 
 .navbar a {
-  color: #444;
   text-decoration: none;
+  color: #444;
 }
 
 .navbar a:hover {
