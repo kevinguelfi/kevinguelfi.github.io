@@ -1,45 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap');
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  background: #ffffff;
-  color: #1f1f1f;
   font-family: 'Inter', sans-serif;
+  color: #1f1f1f;
 }
 
-/* NAVBAR */
+/* NAV */
 .navbar {
   display: flex;
   justify-content: center;
   gap: 40px;
-  padding: 30px 0;
-  font-size: 15px;
+  padding: 32px 0;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #444;
+/* PAGE CENTERING */
+.page {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
 }
 
-.navbar a:hover {
-  color: #000;
-}
-
-/* LAYOUT */
-.layout {
+/* GRID */
+.grid {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 240px 1fr;
+  column-gap: 120px;
   max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 40px;
-  column-gap: 80px;
+  width: 100%;
 }
 
-/* LEFT COLUMN */
+/* LEFT */
 .left {
   display: flex;
   flex-direction: column;
@@ -49,7 +40,7 @@ body {
 .profile-pic {
   width: 180px;
   border-radius: 6px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .links a {
@@ -60,22 +51,28 @@ body {
   text-decoration: none;
 }
 
-.links a:hover {
-  color: #000;
+/* RIGHT */
+.right {
+  display: flex;
+  align-items: center; /* ⬅ vertical alignment fix */
 }
 
-/* MAIN CONTENT */
-.main h1 {
+/* CONTENT CONSTRAINT */
+.content {
+  max-width: 640px;     /* ⬅ THIS fixes margins */
+  padding-right: 40px; /* ⬅ breathing room */
+}
+
+/* TYPOGRAPHY */
+.content h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 44px;
-  font-weight: 500;
-  margin: 0 0 25px 0;
+  font-size: 46px;
+  margin: 0 0 24px 0;
 }
 
-.description {
-  font-size: 18.5px;
-  line-height: 1.75;
-  max-width: 600px;
-  color: #333;
+.content p {
+  font-size: 19px;
+  line-height: 1.8;
+  margin: 0;
 }
 
