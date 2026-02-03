@@ -1,27 +1,37 @@
-/* Agrega esto al final de tu style.css */
-
-.content-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 40px;
+/* NAME - Antes 42px, ahora 34px */
+.right h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 34px; 
+  margin: 0 0 25px 0;
+  letter-spacing: -0.5px;
 }
 
+/* BIO - Antes 18.5px, ahora 16px */
+.bio {
+  font-size: 16px;
+  line-height: 1.7; /* Proporción ideal para lectura */
+  max-width: 650px;
+  text-align: justify;
+  hyphens: auto;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+/* LISTAS DE CONTENIDO (Publications, etc.) */
 .content-list li {
-  font-size: 17px;
+  font-size: 15px; /* Un poco más pequeña que la bio */
   line-height: 1.6;
-  margin-bottom: 25px;
-  text-align: justify; /* Mantiene el borde prolijo */
+  margin-bottom: 20px;
+  text-align: justify;
   color: #444;
 }
 
-.content-list li strong {
-  color: #000;
-  display: block; /* El título arriba para que se vea más académico */
-}
-
-/* Estilo para el link de "Back to Home" */
-.left .links a:first-child {
-  font-weight: 600;
-  margin-bottom: 25px;
-  color: #222;
+/* NAVBAR - Antes 15px, ahora 14px */
+.navbar {
+  display: flex;
+  gap: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase; /* Opcional: le da un look más de 'menú' */
+  letter-spacing: 0.5px;
 }
