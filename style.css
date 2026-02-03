@@ -33,11 +33,14 @@ body {
 }
 
 .profile-pic {
-  width: 120px; /* Reduje un poco más la foto para que entre bien en la columna fina */
+  width: 110px; /* El ancho fino que elegimos */
+  height: auto;
   border-radius: 3px;
   margin-bottom: 20px;
+  display: block;
+  /* Esto ayuda a que la imagen se vea nítida si es de alta resolución */
+  image-rendering: -webkit-optimize-contrast; 
 }
-
 .links a {
   display: block;
   margin-bottom: 8px;
