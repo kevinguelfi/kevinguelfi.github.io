@@ -1,78 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --accent: #2f5d8a; /* subtle academic blue */
+}
 
 body {
   margin: 0;
+  background: #ffffff;
+  color: #222;
   font-family: 'Inter', sans-serif;
-  color: #1f1f1f;
 }
 
-/* NAV */
-.navbar {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 32px 0;
-}
-
-/* PAGE CENTERING */
+/* PAGE CONTAINER */
 .page {
-  display: flex;
-  justify-content: center;
-  padding: 60px 20px;
+  max-width: 680px;
+  margin: 80px auto 100px auto;
+  padding: 0 24px;
+  text-align: center;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  column-gap: 120px;
-  max-width: 1100px;
-  width: 100%;
-}
-
-/* LEFT */
-.left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
+/* PHOTO */
 .profile-pic {
-  width: 180px;
+  width: 160px;
   border-radius: 6px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+}
+
+/* NAME */
+h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 14px 0;
+  color: #111;
+}
+
+/* LINKS */
+.links {
+  font-size: 14px;
+  margin-bottom: 36px;
+  color: #666;
 }
 
 .links a {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #555;
+  color: var(--accent);
   text-decoration: none;
 }
 
-/* RIGHT */
-.right {
+.links a:hover {
+  text-decoration: underline;
+}
+
+.links span {
+  margin: 0 6px;
+}
+
+/* BIO */
+.bio {
+  font-size: 18.5px;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 60px;
+}
+
+/* NAVBAR */
+.navbar {
   display: flex;
-  align-items: center; /* ⬅ vertical alignment fix */
+  justify-content: center;
+  gap: 28px;
+  font-size: 15px;
 }
 
-/* CONTENT CONSTRAINT */
-.content {
-  max-width: 640px;     /* ⬅ THIS fixes margins */
-  padding-right: 40px; /* ⬅ breathing room */
+.navbar a {
+  color: #444;
+  text-decoration: none;
 }
 
-/* TYPOGRAPHY */
-.content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 46px;
-  margin: 0 0 24px 0;
-}
-
-.content p {
-  font-size: 19px;
-  line-height: 1.8;
-  margin: 0;
+.navbar a:hover {
+  color: var(--accent);
 }
 
