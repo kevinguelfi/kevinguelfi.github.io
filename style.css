@@ -18,7 +18,7 @@ body {
 /* PAGE LAYOUT */
 .page {
   display: grid;
-  grid-template-columns: 22% 78%;
+  grid-template-columns: 22% 78%; /* Columna gris más fina */
   min-height: 100vh;
 }
 
@@ -28,12 +28,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 60px 10% 40px 15%; /* Reducido el padding superior */
+  /* Ajustamos el padding para que la foto no quede pegada al borde */
+  padding: 60px 40px 40px 60px; 
 }
 
 .profile-pic {
-  width: 140px; /* Foto más pequeña para acompañar el texto */
-  border-radius: 4px;
+  width: 120px; /* Reduje un poco más la foto para que entre bien en la columna fina */
+  border-radius: 3px;
   margin-bottom: 20px;
 }
 
@@ -68,11 +69,10 @@ body {
 
 /* BIO */
 .bio {
-  font-size: 14px; /* Igual al base */
+  font-size: 14px;
   line-height: 1.7;
-  max-width: 550px; /* Líneas más cortas para mejor lectura */
+  max-width: 520px; /* Mantiene el bloque de texto compacto y prolijo */
   text-align: justify;
-  hyphens: auto;
   margin-bottom: 40px;
   color: #444;
 }
