@@ -1,37 +1,118 @@
-/* NAME - Antes 42px, ahora 34px */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --accent: #2f5d8a;
+  --left-bg: #f3f3f3;
+}
+
+/* RESET Y BASE */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  background: #ffffff;
+  font-size: 14px; /* Tamaño base reducido */
+  line-height: 1.6;
+}
+
+/* PAGE LAYOUT */
+.page {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  min-height: 100vh;
+}
+
+/* LEFT COLUMN */
+.left {
+  background: var(--left-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 60px 10% 40px 15%; /* Reducido el padding superior */
+}
+
+.profile-pic {
+  width: 140px; /* Foto más pequeña para acompañar el texto */
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.links a {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12.5px; /* Links más pequeños */
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* RIGHT COLUMN */
+.right {
+  padding: 50px 10% 60px 10%; /* Padding proporcional */
+}
+
+/* NOMBRE Y TÍTULOS */
 .right h1 {
   font-family: 'Libre Baskerville', serif;
-  font-size: 34px; 
-  margin: 0 0 25px 0;
-  letter-spacing: -0.5px;
+  font-size: 24px; /* Nombre más discreto */
+  margin: 0 0 18px 0;
+  color: #111;
+  letter-spacing: -0.2px;
 }
 
-/* BIO - Antes 18.5px, ahora 16px */
+.right h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px; /* Títulos de secciones internas */
+  margin: 30px 0 15px 0;
+  color: #222;
+}
+
+/* BIO */
 .bio {
-  font-size: 16px;
-  line-height: 1.7; /* Proporción ideal para lectura */
-  max-width: 650px;
+  font-size: 14px; /* Igual al base */
+  line-height: 1.7;
+  max-width: 550px; /* Líneas más cortas para mejor lectura */
   text-align: justify;
   hyphens: auto;
-  margin-bottom: 50px;
-  color: #333;
-}
-
-/* LISTAS DE CONTENIDO (Publications, etc.) */
-.content-list li {
-  font-size: 15px; /* Un poco más pequeña que la bio */
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: justify;
+  margin-bottom: 40px;
   color: #444;
 }
 
-/* NAVBAR - Antes 15px, ahora 14px */
+/* LISTAS DE CONTENIDO (Publications, etc.) */
+.content-list {
+  list-style: none;
+  padding: 0;
+}
+
+.content-list li {
+  font-size: 13.5px; /* Ligeramente más chico para listas */
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #555;
+}
+
+/* NAVBAR */
 .navbar {
   display: flex;
-  gap: 25px;
-  font-size: 14px;
+  gap: 20px;
+  font-size: 12.5px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #666;
   font-weight: 500;
-  text-transform: uppercase; /* Opcional: le da un look más de 'menú' */
-  letter-spacing: 0.5px;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .page { grid-template-columns: 100%; }
+  .left { padding: 40px; align-items: center; }
+  .right { padding: 40px 20px; }
 }
