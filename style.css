@@ -141,3 +141,7 @@ body {
 .back-home:visited {
   color: #666;
 }
+
+.links a:visited {
+  color: inherit;
+}
