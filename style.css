@@ -122,3 +122,18 @@ body {
   .left { padding: 40px; align-items: center; }
   .right { padding: 40px 20px; }
 }
+
+.back-home {
+  position: fixed;
+  top: 16px;
+  left: 20px;
+  font-size: 12px;
+  color: #666;
+  text-decoration: none;
+  font-weight: 500;
+  z-index: 100;
+}
+
+.back-home:hover {
+  color: var(--accent);
+}
