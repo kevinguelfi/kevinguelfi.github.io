@@ -75,10 +75,10 @@ body {
 /* BIO */
 .bio {
   font-size: 14px;
-  line-height: 1.7;
-  max-width: 520px; /* Mantiene el bloque de texto compacto y prolijo */
+  line-height: 1.5;
+  max-width: 520px;
   text-align: justify;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: #444;
 }
 
@@ -100,9 +100,10 @@ body {
   display: flex;
   gap: 20px;
   font-size: 12.5px;
-  border-top: 1px solid #eee;
-  padding-top: 20px;
-  margin-top: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 14px;
+  margin-top: 6px;
+  margin-bottom: 20px;
 }
 
 .navbar a {
